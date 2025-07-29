@@ -1,0 +1,53 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+.env/
+.venv/
+
+# Environment variables and credentials
+*.env
+*.env.*
+
+# VS Code settings
+.vscode/
+
+# macOS files
+.DS_Store
+
+# Test output
+htmlcov/
+.coverage
+.cache
+pytest_cache/
+.tox/
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# MyPy
+.mypy_cache/
+
+# PyInstaller
+*.spec
+build/
+dist/
+
+# Logs
+*.log
+
+# pip tools
+pip-log.txt
+
+# Python wheels
+*.whl
+
+# Ignore local configuration
+*.local
