@@ -1,12 +1,12 @@
-def outter_function():
+def outer_function():
     message = "Hello, World!"
     def inner_function():
         print(message)
 
     return inner_function
 
-outter = outter_function()
 
+outer = outer_function()
 
 
 def initialize():
@@ -17,7 +17,8 @@ def main():
     initialize()
     print("Program is running...")
     # Put main logic here
-    outter()
+    outer()
+
 
 if __name__ == "__main__":
     main()
