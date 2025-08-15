@@ -1,5 +1,5 @@
 # Placeholder for context_manager.py
-
+from contextlib import contextmanager
 
 with open('Week01_AdvancedPython/hello.txt', 'r') as f:
     print(f.readlines())
@@ -27,3 +27,13 @@ with FileManager("Week01_AdvancedPython/hello.txt", "r") as f:
     f.readlines()
 
 print(f.closed)
+
+
+def open_manager(file, mode):
+    f = open(file, mode)
+    yield
+    f.close()
+
+@contextmanager
+with open_manager("Week01_AdvancedPython/hello.txt", "r") as f:
+    f.write("I try to improve my python programin")
