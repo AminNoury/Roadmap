@@ -17,6 +17,9 @@ class FileManager:
         return self.file
     
     def __exit__(self, exe_type, exe_vals, tracback):
+        print(exe_type)
+        print(exe_vals)
+        print(tracback)
         self.file.close()
 
 
