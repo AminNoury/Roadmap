@@ -25,12 +25,17 @@ with FileManager("Week01_AdvancedPython/hello.txt", "r") as f:
 
 print(f.closed)
 
-
+@contextmanager
 def open_manager(file, mode):
     f = open(file, mode)
-    yield
+    try:
+        yield f
+    except Exception as e:
+        raise f'{e}'
     f.close()
 
-@contextmanager
-with open_manager("Week01_AdvancedPython/hello.txt", "r") as f:
-    f.write("I try to improve my python programin")
+
+with open_manager('Week01_AdvancedPython/hello.txt', 'r') as f:
+    print(f.readlines())
+
+print(f.closed)
