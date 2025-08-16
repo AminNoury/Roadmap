@@ -11,4 +11,3 @@ def paginator(data, page_size):
 
 for page in paginator(items, page_size):
     print(page)
-
