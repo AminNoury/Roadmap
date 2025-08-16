@@ -15,7 +15,7 @@ class FileManager:
     def __enter__(self):
         self.file = open(self.filename, self.mode)
         return self.file
-    
+
     def __exit__(self, exe_type, exe_vals, tracback):
         self.file.close()
 
@@ -27,12 +27,13 @@ print(f.closed)
 
 @contextmanager
 def open_manager(file, mode):
-    f = open(file, mode)
     try:
+        f = open(file, mode)
         yield f
     except Exception as e:
         raise f'{e}'
-    f.close()
+    finally:
+        f.close()
 
 
 with open_manager('Week01_AdvancedPython/hello.txt', 'r') as f:

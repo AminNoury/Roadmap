@@ -1,5 +1,6 @@
 def outer_function():
     message = "Hello, World!"
+
     def inner_function():
         print(message)
 
