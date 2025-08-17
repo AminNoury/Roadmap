@@ -9,5 +9,10 @@ def paginator(data, page_size):
         yield data[i: i+page_size]
 
 
-for page in paginator(items, page_size):
-    print(page)
+def main():
+    for page in paginator(items, page_size):
+        print(page)
+
+
+if __name__ == "__main__":
+    main()
