@@ -25,6 +25,7 @@ with FileManager("Week01_AdvancedPython/hello.txt", "r") as f:
 
 print(f.closed)
 
+
 @contextmanager
 def open_manager(file, mode):
     try:
